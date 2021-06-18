@@ -3,7 +3,12 @@
   "viewportHeight": 1100,
   "baseUrl": "http://localhost:3000",
   "video": false,
-  "integrationFolder": "src",
-  "componentFolder": "src",
-  "testFiles": "./**/*.spec.{ts,tsx,js,jsx}"
+  "testFiles": "./**/*.spec.{ts,tsx,js,jsx}",
+  "component": {
+    "componentFolder": "src",
+    "testFiles": "**/*spec.{js,jsx,ts,tsx}",
+    "viewportHeight": 500,
+    "viewportWidth": 700
+  }
+  
 }

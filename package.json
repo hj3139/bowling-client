@@ -1,5 +1,5 @@
 {
-  "name": "next-material-boilerplate",
+  "name": "bowling-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,8 @@
     "run": "start-server-and-test dev http-get://localhost:3000 cy:run",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "ct:open": "cypress open-ct"
+    "ct:open": "cypress open-ct",
+    "ct:run": "cypress run-ct"
   },
   "lint-staged": {
     "./**/*": [
@@ -50,7 +51,7 @@
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
-    "html-webpack-plugin": "^5.3.1",
+    "html-webpack-plugin": "^4.5.2",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "next-compose-plugins": "^2.2.1",
@@ -58,6 +59,7 @@
     "prettier": "^2.3.1",
     "start-server-and-test": "^1.12.5",
     "typescript": "4.3.2",
+    "webpack": "^4.46.0",
     "webpack-dev-server": "^3.11.2"
   }
 }
