@@ -1,5 +1,11 @@
+import { Login } from 'containers';
+
 const Home = () => {
-  return <div></div>;
+  return (
+    <>
+      <Login />
+    </>
+  );
 };
 
 export default Home;
