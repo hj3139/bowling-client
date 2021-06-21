@@ -1,4 +1,5 @@
 import { FormEvent } from 'react';
+import Link from 'next/link';
 import {
   Button,
   Grid,
@@ -100,6 +101,18 @@ export const LoginForm = (props: LoginFormProps) => {
         >
           로그인
         </Button>
+      </Grid>
+      <Grid container justify='center' className='button-grid'>
+        <Link href='/signup' passHref>
+          <Button
+            className='submit-button'
+            variant='contained'
+            color='primary'
+            type='submit'
+          >
+            회원가입
+          </Button>
+        </Link>
       </Grid>
     </StyledLoginForm>
   );

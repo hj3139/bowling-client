@@ -1,11 +1,12 @@
 import { Login } from 'containers';
+import { MainLayout } from 'layouts';
 
-const Home = () => {
+const HomePage = () => {
   return (
-    <>
+    <MainLayout>
       <Login />
-    </>
+    </MainLayout>
   );
 };
 
-export default Home;
+export default HomePage;
