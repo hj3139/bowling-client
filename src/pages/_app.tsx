@@ -7,6 +7,14 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Component {...pageProps} />
+      <style global jsx>
+        {`
+          .paper {
+            height: 100vh;
+            padding: 40px;
+          }
+        `}
+      </style>
     </ThemeProvider>
   );
 };

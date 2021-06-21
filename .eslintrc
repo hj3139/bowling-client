@@ -32,7 +32,7 @@
     "prettier/prettier": "error", //포매팅 에러 표충,
     "react/display-name": "off"
   },
-  "ignorePatterns": ["node_modules/", "next.config.js", "cypress"],
+  "ignorePatterns": ["node_modules/", "next.config.js", "cypress", "**/*.spec.tsx"],
   "settings": {
     "react": {
       "version": "detect" // 프로젝트 react 버저닝 확인
