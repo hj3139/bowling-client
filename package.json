@@ -15,6 +15,11 @@
     "ct:open": "cypress open-ct",
     "ct:run": "cypress run-ct"
   },
+  "husky": {
+    "hooks": {
+       "pre-commit": "lint-staged --no-stash"
+    }
+  },
   "lint-staged": {
     "./**/*": [
       "eslint --fix ./src"
