@@ -16,7 +16,7 @@
     "ct:run": "cypress run-ct"
   },
   "lint-staged": {
-    "**/*": [
+    "./**/*": [
       "eslint --fix ./src"
     ]
   },
