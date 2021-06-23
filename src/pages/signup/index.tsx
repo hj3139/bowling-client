@@ -1,9 +1,9 @@
-import { Signup } from 'containers';
+import { SignupForm } from 'components/Form';
 
 const SignupPage = () => {
   return (
     <>
-      <Signup />
+      <SignupForm />
     </>
   );
 };

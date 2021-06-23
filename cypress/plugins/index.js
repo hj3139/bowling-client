@@ -16,7 +16,7 @@
  * @type {Cypress.PluginConfig}
  */
 const injectDevServer = require('@cypress/react/plugins/next');
-// eslint-disable-next-line no-unused-vars
+
 module.exports = (on, config) => {
   if (config.testingType === 'component') {
     injectDevServer(on, config);

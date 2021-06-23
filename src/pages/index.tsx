@@ -1,10 +1,10 @@
-import { Login } from 'containers';
 import { MainLayout } from 'layouts';
+import { LoginForm } from 'components/Form';
 
 const HomePage = () => {
   return (
     <MainLayout>
-      <Login />
+      <LoginForm />
     </MainLayout>
   );
 };

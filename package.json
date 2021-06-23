@@ -3,23 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cypress run-ct && next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint:fix": "eslint --fix src",
     "precommit": "lint-staged",
-    "install": "husky install ./.husky",
     "test": "start-server-and-test dev http-get://localhost:3000 cy:open",
     "run": "start-server-and-test dev http-get://localhost:3000 cy:run",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "ct:open": "cypress open-ct",
     "ct:run": "cypress run-ct"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged --no-stash"
-    }
   },
   "lint-staged": {
     "./**/*": [

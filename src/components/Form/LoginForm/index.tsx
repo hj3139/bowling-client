@@ -1,15 +1,9 @@
 import { FormEvent } from 'react';
 import Link from 'next/link';
-import {
-  Button,
-  Grid,
-  Input,
-  InputLabel,
-  InputProps,
-  FormControl
-} from '@material-ui/core';
+import { Button, Grid } from '@material-ui/core';
 import styled from 'styled-components';
 import { useHooks } from './hook';
+import { GridCenterFormInput } from 'components/TestInput';
 
 const StyledLoginForm = styled.form`
   .button-grid {
@@ -20,21 +14,15 @@ const StyledLoginForm = styled.form`
     margin-top: 20px;
   }
 
-  .submit-button {
-    width: 50%;
+  .button {
+    width: 540px;
     height: 5vh;
     font-size: 30px;
   }
-  .form-control-input {
-    width: 50%;
-  }
-  @media screen and (max-width: 768px) {
-    .submit-button {
-      font-size: 4vw;
-      min-width: 220px;
-    }
 
-    .form-control-input {
+  @media screen and (max-width: 768px) {
+    .button {
+      font-size: 4vw;
       min-width: 220px;
     }
   }
@@ -43,23 +31,6 @@ const StyledLoginForm = styled.form`
 interface LoginFormProps {
   onSubmit?: (e: FormEvent<HTMLFormElement>) => void;
 }
-
-interface GridCenteInput extends InputProps {
-  gridClassName: string;
-  label: string;
-}
-
-const GridCenterTextFiled = (props: GridCenteInput) => {
-  const { gridClassName, required, label, ...rest } = props;
-  return (
-    <Grid container justify='center' className={gridClassName}>
-      <FormControl className='form-control-input'>
-        <InputLabel required={required}>{label}</InputLabel>
-        <Input {...rest} />
-      </FormControl>
-    </Grid>
-  );
-};
 
 export const LoginForm = (props: LoginFormProps) => {
   const { onSubmit } = props;
@@ -74,7 +45,7 @@ export const LoginForm = (props: LoginFormProps) => {
         }
       }}
     >
-      <GridCenterTextFiled
+      {/* <GridCenterFormInput
         gridClassName='input-id-grid'
         required={true}
         label='Email'
@@ -82,8 +53,8 @@ export const LoginForm = (props: LoginFormProps) => {
         type='email'
         name='email'
         onChange={e => handleSetId(e.target.value)}
-      />
-      <GridCenterTextFiled
+      /> */}
+      <GridCenterFormInput
         gridClassName='input-password-grid'
         required
         className='input-password'
@@ -94,7 +65,7 @@ export const LoginForm = (props: LoginFormProps) => {
       />
       <Grid container justify='center' className='button-grid'>
         <Button
-          className='submit-button'
+          className='button'
           variant='contained'
           color='primary'
           type='submit'
@@ -105,7 +76,7 @@ export const LoginForm = (props: LoginFormProps) => {
       <Grid container justify='center' className='button-grid'>
         <Link href='/signup' passHref>
           <Button
-            className='submit-button'
+            className='button'
             variant='contained'
             color='primary'
             type='submit'
